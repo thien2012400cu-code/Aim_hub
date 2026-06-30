@@ -1,0 +1,517 @@
+local _CZpF6TDKCZ={{272,7893,105,32,77,224,117,32,76,105,234,110,32,84,7909,99,32,84,7855,116},{65,98,115,111,108,117,116,101,67,111,110,116,101,110,116,83,105,122,101},{72,105,7879,110,32,78,250,116,32,66,7845,109,32,7842,111,32,84,7855,116},{75,237,99,104,32,84,104,432,7899,99,32,78,250,116,32,7842,111},{272,7893,105,32,77,224,117,32,76,105,234,110,32,84,7909,99,32},{78,103,7855,109,32,84,7921,32,272,7897,110,103,32,84,7855,116},{72,105,7879,110,32,78,250,116,32,66,7845,109,32,7842,111,32},{72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116},{85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101},{66,7887,32,81,117,97,32,84,432,7901,110,103,32,84,7855,116},{78,103,7855,109,32,72,7907,112,32,76,7879,32,84,7855,116},{78,104,236,110,32,88,117,121,234,110,32,84,7855,116},{272,7871,109,32,80,108,97,121,101,114,32,84,7855,116},{83,99,114,111,108,108,105,110,103,70,114,97,109,101},{86,242,110,103,32,78,103,7855,109,32,66,7853,116},{66,7887,32,81,117,97,32,84,432,7901,110,103,32},{78,103,7855,109,32,84,7921,32,272,7897,110,103,32},{75,233,111,32,272,7883,99,104,32,84,7855,116},{78,103,7855,109,32,72,7907,112,32,76,7879,32},{76,105,110,101,32,69,83,80,32,84,7855,116},{85,73,76,105,115,116,76,97,121,111,117,116},{78,103,7855,109,32,7848,110,32,84,7855,116},{78,104,236,110,32,88,117,121,234,110,32},{272,7871,109,32,80,108,97,121,101,114,32},{82,117,110,83,101,114,118,105,99,101},{78,72,204,78,32,88,85,89,202,78},{80,108,97,121,101,114,115,58,32,48},{84,101,120,116,66,117,116,116,111,110},{86,7883,32,84,114,237,32,272,7847,117},{86,242,110,103,32,78,103,7855,109,32},{80,108,97,121,101,114,115,58,32},{84,101,120,116,76,97,98,101,108},{75,233,111,32,272,7883,99,104,32},{76,105,110,101,32,69,83,80,32},{83,99,114,101,101,110,71,117,105},{72,117,109,97,110,111,105,100},{78,103,7855,109,32,7848,110,32},{71,243,99,32,78,104,236,110},{85,73,67,111,114,110,101,114},{80,108,97,121,101,114,115},{86,7883,32,84,114,237,32},{67,224,105,32,272,7863,116},{77,192,85,32,83,7854,67},{67,105,114,99,108,101},{272,7897,32,75,233,111},{83,113,117,97,114,101},{70,114,97,109,101},{77,111,100,101,108},{84,111,114,115,111},{84,114,7855,110,103},{78,71,7854,77},{76,105,110,101},{84,104,226,110},{72,101,97,100},{272,7847,117},{66,7853,116},{76,97,109},{76,7909,99},{84,7855,116},{272,7887},{84,72},{32},{128065},{128584},{45}}
+local _bMRrcxOUOF=function(i)
+local s=_CZpF6TDKCZ[i+1]
+if not s then return''end
+local r={}
+for j=1,#s do r[j]=string.char(s[j])end
+return table.concat(r)
+end
+local Players = game:GetService(_bMRrcxOUOF(39))
+local RunService = game:GetService(_bMRrcxOUOF(24))
+local UserInputService = game:GetService(_bMRrcxOUOF(8))
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+local HubGui = Instance.new(_bMRrcxOUOF(34), game.CoreGui)
+HubGui.Name = _bMRrcxOUOF(60)
+HubGui.ResetOnSpawn = false
+local MainFrame = Instance.new(_bMRrcxOUOF(46), HubGui)
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.Size = UDim2.new(0, 260, 0, 410)
+MainFrame.Position = UDim2.new(0.5, -130, 0.5, -205)
+MainFrame.Active = true
+local TitleLabel = Instance.new(_bMRrcxOUOF(31), MainFrame)
+TitleLabel.Size = UDim2.new(1, 0, 0, 30)
+TitleLabel.Text = _bMRrcxOUOF(60)
+TitleLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.Font = Enum.Font.SourceSansBold
+TitleLabel.TextSize = 18
+local EditBtn = Instance.new(_bMRrcxOUOF(27), TitleLabel)
+EditBtn.Position = UDim2.new(1, -70, 0, 0)
+EditBtn.Size = UDim2.new(0, 40, 1, 0)
+EditBtn.BackgroundTransparency = 1
+EditBtn.Text = _bMRrcxOUOF(41)
+EditBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+EditBtn.TextSize = 12
+EditBtn.Font = Enum.Font.SourceSansBold
+local MinBtn = Instance.new(_bMRrcxOUOF(27), TitleLabel)
+MinBtn.Position = UDim2.new(1, -30, 0, 0)
+MinBtn.Size = UDim2.new(0, 30, 1, 0)
+MinBtn.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MinBtn.Text = _bMRrcxOUOF(64)
+MinBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinBtn.TextSize = 18
+MinBtn.BorderSizePixel = 0
+local minimized = false
+MinBtn.MouseButton1Click:Connect(function()
+minimized = not minimized
+MainFrame.Size = minimized and UDim2.new(0, 260, 0, 30) or UDim2.new(0, 260, 0, 410)
+end)
+local dragging, dragInput, dragStart, startPos
+TitleLabel.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+dragging = true
+dragStart = input.Position
+startPos = MainFrame.Position
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then dragging = false end
+end)
+end
+end)
+TitleLabel.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then dragInput = input end
+end)
+UserInputService.InputChanged:Connect(function(input)
+if input == dragInput and dragging then
+local delta = input.Position - dragStart
+MainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+end)
+local TabContainer = Instance.new(_bMRrcxOUOF(46), MainFrame)
+TabContainer.Size = UDim2.new(1, 0, 0, 30)
+TabContainer.Position = UDim2.new(0, 0, 0, 30)
+TabContainer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+local tabs = {_bMRrcxOUOF(50), _bMRrcxOUOF(25), _bMRrcxOUOF(42)}
+local tabBtns = {}
+local pages = {}
+local function createPage(name)
+local sf = Instance.new(_bMRrcxOUOF(13), MainFrame)
+sf.Size = UDim2.new(1, 0, 1, -60)
+sf.Position = UDim2.new(0, 0, 0, 60)
+sf.BackgroundTransparency = 1
+sf.ScrollBarThickness = 2
+sf.Visible = false
+local layout = Instance.new(_bMRrcxOUOF(20), sf)
+layout.Padding = UDim.new(0, 5)
+layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+layout:GetPropertyChangedSignal(_bMRrcxOUOF(1)):Connect(function()
+sf.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y + 10)
+end)
+return sf
+end
+for i, tabName in ipairs(tabs) do
+local btn = Instance.new(_bMRrcxOUOF(27), TabContainer)
+btn.Size = UDim2.new(1/3, 0, 1, 0)
+btn.Position = UDim2.new((i-1)/3, 0, 0, 0)
+btn.Text = tabName
+btn.Font = Enum.Font.SourceSansBold
+btn.TextSize = 12
+btn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+local page = createPage(tabName)
+tabBtns[tabName] = btn
+pages[tabName] = page
+btn.MouseButton1Click:Connect(function()
+for k, v in pairs(pages) do v.Visible = k == tabName end
+for k, v in pairs(tabBtns) do v.BackgroundColor3 = k == tabName and Color3.fromRGB(60, 60, 60) or Color3.fromRGB(40, 40, 40) end
+end)
+end
+pages[_bMRrcxOUOF(50)].Visible = true
+tabBtns[_bMRrcxOUOF(50)].BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+local function createButton(parent, text, onClick)
+local btn = Instance.new(_bMRrcxOUOF(27), parent)
+btn.Size = UDim2.new(0.9, 0, 0, 30)
+btn.Text = text
+btn.Font = Enum.Font.SourceSansBold
+btn.TextSize = 14
+btn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+btn.MouseButton1Click:Connect(onClick)
+return btn
+end
+local function createSlider(parent, name, min, max, default, callback)
+local frame = Instance.new(_bMRrcxOUOF(46), parent)
+frame.Size = UDim2.new(0.9, 0, 0, 40)
+frame.BackgroundTransparency = 1
+local lbl = Instance.new(_bMRrcxOUOF(31), frame)
+lbl.Size = UDim2.new(1, 0, 0, 15)
+lbl.Text = name .. _bMRrcxOUOF(61) .. tostring(default)
+lbl.BackgroundTransparency = 1
+lbl.TextColor3 = Color3.fromRGB(255, 255, 255)
+lbl.Font = Enum.Font.SourceSans
+lbl.TextSize = 14
+local bg = Instance.new(_bMRrcxOUOF(46), frame)
+bg.Position = UDim2.new(0, 0, 0, 20)
+bg.Size = UDim2.new(1, 0, 0, 10)
+bg.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+local bar = Instance.new(_bMRrcxOUOF(46), bg)
+bar.Size = UDim2.new((default - min) / (max - min), 0, 1, 0)
+bar.BackgroundColor3 = Color3.fromRGB(50, 150, 255)
+bg.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+local conn; conn = RunService.RenderStepped:Connect(function()
+local mousePos = UserInputService:GetMouseLocation()
+local rel = math.clamp((mousePos.X - bg.AbsolutePosition.X) / bg.AbsoluteSize.X, 0, 1)
+local val = math.floor(min + rel * (max - min))
+bar.Size = UDim2.new(rel, 0, 1, 0)
+lbl.Text = name .. _bMRrcxOUOF(61) .. tostring(val)
+callback(val)
+if not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) and not UserInputService.TouchEnabled then
+conn:Disconnect()
+end
+end)
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then if conn then conn:Disconnect() end end
+end)
+end
+end)
+end
+local aimAuto = false
+local aimLegit = false
+local silentAim = false
+local magnetEnabled = false
+local espEnabled = false
+local showFOV = true
+local rgbMode = false
+local currentColor = Color3.fromRGB(255, 0, 0)
+local aimTightness = 50
+local aimFOV = 150
+local showLegitUI = false
+local wallCheck = false
+local espLine = false
+local espCount = false
+local menuHidden = false
+local partList = {_bMRrcxOUOF(54), _bMRrcxOUOF(52)}
+local partIdx = 1
+local editMode = false
+local holdingLegitBtn = false
+local touchID = nil
+local ClosestPart = nil
+local MagnetTarget = nil
+local function isVisible(targetPart)
+if not wallCheck then return true end
+if not targetPart then return false end
+local origin = Camera.CFrame.Position
+local direction = (targetPart.Position - origin).Unit * (targetPart.Position - origin).Magnitude
+local raycastParams = RaycastParams.new()
+raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+raycastParams.FilterDescendantsInstances = {LocalPlayer.Character}
+raycastParams.IgnoreWater = true
+local result = workspace:Raycast(origin, direction, raycastParams)
+if result then
+local hitModel = result.Instance:FindFirstAncestorOfClass(_bMRrcxOUOF(47))
+local targetModel = targetPart:FindFirstAncestorOfClass(_bMRrcxOUOF(47))
+return hitModel == targetModel
+end
+return true
+end
+local LegitBtnFrame = Instance.new(_bMRrcxOUOF(46), HubGui)
+LegitBtnFrame.Size = UDim2.new(0, 80, 0, 80)
+LegitBtnFrame.Position = UDim2.new(0.8, 0, 0.6, 0)
+LegitBtnFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LegitBtnFrame.BackgroundTransparency = 1
+LegitBtnFrame.Visible = true
+LegitBtnFrame.Active = false
+LegitBtnFrame.ZIndex = 0
+Instance.new(_bMRrcxOUOF(38), LegitBtnFrame).CornerRadius = UDim.new(1, 0)
+local EditIndicator = Instance.new(_bMRrcxOUOF(46), LegitBtnFrame)
+EditIndicator.Size = UDim2.new(1, 0, 1, 0)
+EditIndicator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EditIndicator.BackgroundTransparency = 0.5
+EditIndicator.Visible = false
+EditIndicator.Active = false
+EditIndicator.ZIndex = 0
+Instance.new(_bMRrcxOUOF(38), EditIndicator).CornerRadius = UDim.new(1, 0)
+local legitBtnPos = {ScaleX = 0.8, OffsetX = 0, ScaleY = 0.6, OffsetY = 0}
+local legitBtnSize = {X = 80, Y = 80}
+local d2, dInput2, dStart2, sPos2
+LegitBtnFrame.InputBegan:Connect(function(input)
+if editMode and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+d2 = true; dStart2 = input.Position; sPos2 = LegitBtnFrame.Position
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then d2 = false end
+end)
+end
+end)
+LegitBtnFrame.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then dInput2 = input end
+end)
+UserInputService.InputChanged:Connect(function(input)
+if input == dInput2 and d2 and editMode then
+local delta = input.Position - dStart2
+LegitBtnFrame.Position = UDim2.new(sPos2.X.Scale, sPos2.X.Offset + delta.X, sPos2.Y.Scale, sPos2.Y.Offset + delta.Y)
+legitBtnPos.ScaleX = LegitBtnFrame.Position.X.Scale
+legitBtnPos.OffsetX = LegitBtnFrame.Position.X.Offset
+legitBtnPos.ScaleY = LegitBtnFrame.Position.Y.Scale
+legitBtnPos.OffsetY = LegitBtnFrame.Position.Y.Offset
+legitBtnSize.X = LegitBtnFrame.AbsoluteSize.X
+legitBtnSize.Y = LegitBtnFrame.AbsoluteSize.Y
+end
+end)
+EditBtn.MouseButton1Click:Connect(function()
+editMode = not editMode
+EditBtn.TextColor3 = editMode and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 255, 255)
+EditIndicator.Visible = editMode or showLegitUI
+end)
+local function isInsideLegitBtn(pos)
+local viewport = Camera.ViewportSize
+local gx = legitBtnPos.ScaleX * viewport.X + legitBtnPos.OffsetX
+local gy = legitBtnPos.ScaleY * viewport.Y + legitBtnPos.OffsetY
+local gw = legitBtnSize.X
+local gh = legitBtnSize.Y
+return pos.X >= gx and pos.X <= gx + gw and pos.Y >= gy and pos.Y <= gy + gh
+end
+UserInputService.InputBegan:Connect(function(input, gpe)
+if not aimLegit or editMode then return end
+if input.UserInputType == Enum.UserInputType.MouseButton1 then
+holdingLegitBtn = true
+elseif input.UserInputType == Enum.UserInputType.Touch then
+if isInsideLegitBtn(input.Position) then
+holdingLegitBtn = true
+touchID = input
+end
+end
+end)
+UserInputService.InputEnded:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 then
+holdingLegitBtn = false
+elseif input.UserInputType == Enum.UserInputType.Touch and holdingLegitBtn and input == touchID then
+holdingLegitBtn = false
+touchID = nil
+end
+end)
+local HideMenuBtn = Instance.new(_bMRrcxOUOF(27), HubGui)
+HideMenuBtn.Size = UDim2.new(0, 40, 0, 40)
+HideMenuBtn.Position = UDim2.new(0, 10, 0, 10)
+HideMenuBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+HideMenuBtn.BackgroundTransparency = 0.3
+HideMenuBtn.Text = _bMRrcxOUOF(62)
+HideMenuBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideMenuBtn.TextSize = 20
+HideMenuBtn.Font = Enum.Font.SourceSansBold
+HideMenuBtn.ZIndex = 10
+Instance.new(_bMRrcxOUOF(38), HideMenuBtn).CornerRadius = UDim.new(0, 8)
+HideMenuBtn.MouseButton1Click:Connect(function()
+menuHidden = not menuHidden
+MainFrame.Visible = not menuHidden
+HideMenuBtn.Text = menuHidden and _bMRrcxOUOF(63) or _bMRrcxOUOF(62)
+end)
+local touchCount = 0
+local lastTouchTime = 0
+UserInputService.InputBegan:Connect(function(input, gpe)
+if input.UserInputType == Enum.UserInputType.Keyboard then
+if input.KeyCode == Enum.KeyCode.RightShift then
+menuHidden = not menuHidden
+MainFrame.Visible = not menuHidden
+HideMenuBtn.Text = menuHidden and _bMRrcxOUOF(63) or _bMRrcxOUOF(62)
+end
+elseif input.UserInputType == Enum.UserInputType.Touch then
+local currentTouches = 0
+for _, touch in pairs(UserInputService:GetTouches()) do
+currentTouches = currentTouches + 1
+end
+if currentTouches >= 3 then
+local now = tick()
+if now - lastTouchTime < 1.5 then
+touchCount = touchCount + 1
+else
+touchCount = 1
+end
+lastTouchTime = now
+if touchCount >= 3 then
+menuHidden = not menuHidden
+MainFrame.Visible = not menuHidden
+HideMenuBtn.Text = menuHidden and _bMRrcxOUOF(63) or _bMRrcxOUOF(62)
+touchCount = 0
+end
+end
+end
+end)
+local ToggleAutoBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(5), function() end)
+ToggleAutoBtn.MouseButton1Click:Connect(function()
+aimAuto = not aimAuto
+ToggleAutoBtn.Text = _bMRrcxOUOF(16) .. (aimAuto and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleAutoBtn.BackgroundColor3 = aimAuto and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local ToggleLegitBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(10), function() end)
+ToggleLegitBtn.MouseButton1Click:Connect(function()
+aimLegit = not aimLegit
+ToggleLegitBtn.Text = _bMRrcxOUOF(18) .. (aimLegit and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleLegitBtn.BackgroundColor3 = aimLegit and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local ToggleSilentBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(21), function() end)
+ToggleSilentBtn.MouseButton1Click:Connect(function()
+silentAim = not silentAim
+ToggleSilentBtn.Text = _bMRrcxOUOF(36) .. (silentAim and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleSilentBtn.BackgroundColor3 = silentAim and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local ToggleWallBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(9), function() end)
+ToggleWallBtn.MouseButton1Click:Connect(function()
+wallCheck = not wallCheck
+ToggleWallBtn.Text = _bMRrcxOUOF(15) .. (wallCheck and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleWallBtn.BackgroundColor3 = wallCheck and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+createSlider(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(3), 20, 150, 80, function(v)
+LegitBtnFrame.Size = UDim2.new(0, v, 0, v)
+legitBtnSize.X = v
+legitBtnSize.Y = v
+end)
+local ToggleMagnetBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(17), function() end)
+ToggleMagnetBtn.MouseButton1Click:Connect(function()
+magnetEnabled = not magnetEnabled
+ToggleMagnetBtn.Text = _bMRrcxOUOF(32) .. (magnetEnabled and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleMagnetBtn.BackgroundColor3 = magnetEnabled and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local PartBtn = createButton(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(28), function() end)
+PartBtn.MouseButton1Click:Connect(function()
+partIdx = partIdx % #partList + 1
+PartBtn.Text = _bMRrcxOUOF(40) .. partList[partIdx]
+end)
+createSlider(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(37), 10, 360, 150, function(v) aimFOV = v end)
+createSlider(pages[_bMRrcxOUOF(50)], _bMRrcxOUOF(44), 1, 100, 50, function(v) aimTightness = v end)
+local ToggleEspBtn = createButton(pages[_bMRrcxOUOF(25)], _bMRrcxOUOF(11), function() end)
+ToggleEspBtn.MouseButton1Click:Connect(function() espEnabled = not espEnabled; ToggleEspBtn.Text = _bMRrcxOUOF(22) .. (espEnabled and _bMRrcxOUOF(55) or _bMRrcxOUOF(58)); ToggleEspBtn.BackgroundColor3 = espEnabled and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50) end)
+local ToggleFovBtn = createButton(pages[_bMRrcxOUOF(25)], _bMRrcxOUOF(14), function() end); ToggleFovBtn.BackgroundColor3 = Color3.fromRGB(50, 255, 50)
+ToggleFovBtn.MouseButton1Click:Connect(function() showFOV = not showFOV; ToggleFovBtn.Text = _bMRrcxOUOF(29) .. (showFOV and _bMRrcxOUOF(55) or _bMRrcxOUOF(58)); ToggleFovBtn.BackgroundColor3 = showFOV and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50) end)
+local ShowLegitUBtn = createButton(pages[_bMRrcxOUOF(25)], _bMRrcxOUOF(2), function() end)
+ShowLegitUBtn.MouseButton1Click:Connect(function()
+showLegitUI = not showLegitUI
+ShowLegitUBtn.Text = _bMRrcxOUOF(6) .. (showLegitUI and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ShowLegitUBtn.BackgroundColor3 = showLegitUI and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+EditIndicator.Visible = editMode or showLegitUI
+end)
+local ToggleLineBtn = createButton(pages[_bMRrcxOUOF(25)], _bMRrcxOUOF(19), function() end)
+ToggleLineBtn.MouseButton1Click:Connect(function()
+espLine = not espLine
+ToggleLineBtn.Text = _bMRrcxOUOF(33) .. (espLine and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleLineBtn.BackgroundColor3 = espLine and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local ToggleCountBtn = createButton(pages[_bMRrcxOUOF(25)], _bMRrcxOUOF(12), function() end)
+ToggleCountBtn.MouseButton1Click:Connect(function()
+espCount = not espCount
+ToggleCountBtn.Text = _bMRrcxOUOF(23) .. (espCount and _bMRrcxOUOF(55) or _bMRrcxOUOF(58))
+ToggleCountBtn.BackgroundColor3 = espCount and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50)
+end)
+local function addColorBtn(name, color) local btn = createButton(pages[_bMRrcxOUOF(42)], name, function() end); btn.BackgroundColor3 = color; if name == _bMRrcxOUOF(49) then btn.TextColor3 = Color3.fromRGB(0, 0, 0) end; btn.MouseButton1Click:Connect(function() rgbMode = false; currentColor = color end) end
+addColorBtn(_bMRrcxOUOF(59), Color3.fromRGB(255, 0, 0)); addColorBtn(_bMRrcxOUOF(57), Color3.fromRGB(0, 255, 0)); addColorBtn(_bMRrcxOUOF(56), Color3.fromRGB(0, 0, 255)); addColorBtn(_bMRrcxOUOF(49), Color3.fromRGB(255, 255, 255))
+local RgbBtn = createButton(pages[_bMRrcxOUOF(42)], _bMRrcxOUOF(0), function() end)
+RgbBtn.MouseButton1Click:Connect(function() rgbMode = not rgbMode; RgbBtn.Text = _bMRrcxOUOF(4) .. (rgbMode and _bMRrcxOUOF(55) or _bMRrcxOUOF(58)); RgbBtn.BackgroundColor3 = rgbMode and Color3.fromRGB(50, 255, 50) or Color3.fromRGB(255, 50, 50) end)
+local FOVCircle = Drawing.new(_bMRrcxOUOF(43))
+FOVCircle.Thickness = 1
+FOVCircle.Filled = false
+local CountLabel = Instance.new(_bMRrcxOUOF(31), HubGui)
+CountLabel.Size = UDim2.new(0, 200, 0, 30)
+CountLabel.Position = UDim2.new(0.5, -100, 0, 10)
+CountLabel.BackgroundTransparency = 1
+CountLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CountLabel.Font = Enum.Font.SourceSansBold
+CountLabel.TextSize = 18
+CountLabel.TextStrokeTransparency = 0.5
+CountLabel.Text = _bMRrcxOUOF(26)
+CountLabel.Visible = false
+local function getTargetPart(character)
+if partList[partIdx] == _bMRrcxOUOF(54) then return character:FindFirstChild(_bMRrcxOUOF(53)) end
+return character:FindFirstChild(_bMRrcxOUOF(7)) or character:FindFirstChild(_bMRrcxOUOF(48))
+end
+local ESP_Boxes = {}
+local ESP_Lines = {}
+local SilentTarget = nil
+local countRange = 500
+RunService.RenderStepped:Connect(function()
+if rgbMode then currentColor = Color3.fromHSV(tick() % 5 / 5, 1, 1); TitleLabel.TextColor3 = currentColor else TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255) end
+FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2); FOVCircle.Radius = aimFOV; FOVCircle.Color = currentColor; FOVCircle.Visible = showFOV
+local nearestPos = nil
+local nearestPartObj = nil
+local nearestPlayerObj = nil
+local dist = aimFOV
+local playerCount = 0
+local localRoot = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild(_bMRrcxOUOF(7))
+for _, p in pairs(Players:GetPlayers()) do
+if p ~= LocalPlayer and p.Character then
+local char = p.Character
+local humanoid = char:FindFirstChild(_bMRrcxOUOF(35))
+local isAlive = humanoid and humanoid.Health > 0
+if not ESP_Boxes[p] then
+ESP_Boxes[p] = Drawing.new(_bMRrcxOUOF(45))
+ESP_Boxes[p].Thickness = 1
+ESP_Boxes[p].Filled = false
+end
+if not ESP_Lines[p] then
+ESP_Lines[p] = Drawing.new(_bMRrcxOUOF(51))
+ESP_Lines[p].Thickness = 1
+end
+local root = char:FindFirstChild(_bMRrcxOUOF(7))
+if isAlive and root and localRoot then
+local distance = (root.Position - localRoot.Position).Magnitude
+if distance <= countRange then
+playerCount = playerCount + 1
+end
+end
+if espEnabled and isAlive and root then
+local rootPos, onScreen = Camera:WorldToViewportPoint(root.Position)
+if onScreen then
+local sizeY = 3000 / rootPos.Z
+local sizeX = sizeY / 2
+ESP_Boxes[p].Size = Vector2.new(sizeX, sizeY)
+ESP_Boxes[p].Position = Vector2.new(rootPos.X - sizeX / 2, rootPos.Y - sizeY / 2)
+ESP_Boxes[p].Color = currentColor
+ESP_Boxes[p].Visible = true
+if espLine then
+local screenCenterX = Camera.ViewportSize.X / 2
+local topOffset = 60
+ESP_Lines[p].From = Vector2.new(rootPos.X, rootPos.Y - sizeY / 2)
+ESP_Lines[p].To = Vector2.new(screenCenterX, topOffset)
+ESP_Lines[p].Color = currentColor
+ESP_Lines[p].Visible = true
+else
+ESP_Lines[p].Visible = false
+end
+else
+ESP_Boxes[p].Visible = false
+ESP_Lines[p].Visible = false
+end
+else
+ESP_Boxes[p].Visible = false
+ESP_Lines[p].Visible = false
+end
+if isAlive then
+local tPart = getTargetPart(char)
+if tPart then
+local pos, onScreen = Camera:WorldToViewportPoint(tPart.Position)
+if onScreen then
+local mag = (Vector2.new(pos.X, pos.Y) - Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y/2)).Magnitude
+if mag < dist and isVisible(tPart) then
+dist = mag
+nearestPos = tPart.Position
+nearestPartObj = tPart
+nearestPlayerObj = p
+end
+end
+end
+end
+end
+end
+CountLabel.Text = _bMRrcxOUOF(30) .. tostring(playerCount)
+CountLabel.Visible = espCount
+CountLabel.TextColor3 = currentColor
+for p, box in pairs(ESP_Boxes) do
+if not p.Parent then box:Remove(); ESP_Boxes[p] = nil end
+end
+for p, line in pairs(ESP_Lines) do
+if not p.Parent then line:Remove(); ESP_Lines[p] = nil end
+end
+if magnetEnabled and nearestPlayerObj and nearestPartObj and holdingLegitBtn then
+local enemyChar = nearestPlayerObj.Character
+local enemyRoot = enemyChar:FindFirstChild(_bMRrcxOUOF(7))
+if enemyRoot then
+local distToEnemy = (enemyRoot.Position - Camera.CFrame.Position).Magnitude
+local targetCenterPos = Camera.CFrame.Position + (Camera.CFrame.LookVector * distToEnemy)
+local offset = enemyRoot.Position - nearestPartObj.Position
+enemyRoot.CFrame = CFrame.new(targetCenterPos + offset)
+enemyRoot.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+enemyRoot.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+end
+end
+if silentAim and nearestPartObj then
+SilentTarget = nearestPartObj
+else
+SilentTarget = nil
+end
+if nearestPos and (aimAuto or (aimLegit and holdingLegitBtn)) then
+local targetCFrame = CFrame.new(Camera.CFrame.Position, nearestPos)
+local smoothFactor = math.clamp(aimTightness / 100, 0.01, 1)
+Camera.CFrame = Camera.CFrame:Lerp(targetCFrame, smoothFactor)
+end
+end)
+legitBtnSize.X = LegitBtnFrame.AbsoluteSize.X
+legitBtnSize.Y = LegitBtnFrame.AbsoluteSize.Y
